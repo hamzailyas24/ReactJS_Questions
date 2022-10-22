@@ -1,5 +1,5 @@
----------------------------------------------
-Fetch an API with Loading functionality using Class component:-
+// Fetch an API with Loading functionality using Class component:-
+
 import React from "react";
 export default class MyComponent extends React.Component {
   constructor(props) {
@@ -36,8 +36,8 @@ render() {
   }
 }
 
-----------------------------
-Fetch an API with Loading functionality using Functional component:-
+//Fetch an API with Loading functionality using Functional component:-
+
 import React, { useState, useEffect } from "react";
 export default function UsersData() {
   const [Users, fetchUsers] = useState([]);
@@ -69,8 +69,11 @@ export default function UsersData() {
   if (error) return containsErrorMessage();
   return !isLoaded ? isLoading() : results();
 }
-----------------------------
-Counter with functional component:-
+
+//-----------------------------------------------
+
+// Counter with functional component:-
+
 import "./styles.css";
 import {useEffect, useState} from "react";
 
@@ -87,8 +90,9 @@ export default function App() {
     </div>
   );
 }
--------------------------------------------
-Counter with Class component:-
+
+//Counter with Class component:-
+
 import "./styles.css";
 import React from "react";
 
@@ -115,8 +119,11 @@ export default class App extends React.Component {
   );
 }
 }
-=======================================================================================================================================================================
-To Do application with Class based components:
+
+//-------------------------------------------------------
+
+//To Do application with Class based components:
+
 import React from "react";
 import "./styles.css";
 class App extends React.Component {
@@ -166,8 +173,9 @@ class App extends React.Component {
   }
 }
 export default App;
-------------------------------------------
-Todo with functional component:
+
+//Todo with functional component:
+
 import { useState } from "react";
 
 export default function App() {
@@ -207,8 +215,10 @@ export default function App() {
   );
 }
 
-========================================================================================================================================================================
-Pass data from Child to Parents:
+//-------------------------------------------
+
+// Pass data from Child to Parents:
+
 import { useState } from "react";
 
 //parent Component
@@ -227,12 +237,13 @@ export default function App() {
   );
 }
 
-//child Component //Destructuring from props
+//Child Component //Destructuring from props
+
 const ChildComponent = ({ onClick }) => {
   //it call the parent's callback function using props
   return <button onClick={onClick}>Click</button>;
 };
-===========================================================================
+
 import { useState } from "react";
 
 export default function App() {
@@ -251,8 +262,9 @@ export default function App() {
 const ChildComponent = ({ data }) => {
   return <input onChange={data} />;
 };
-===========================================================================================================================================================================
-Auto counter without button:
+
+// Auto counter without button:
+
 import { useEffect, useState } from "react";
 import "./styles.css";
 
@@ -274,8 +286,10 @@ export default function App() {
     </div>
   );
 }
-========================================================================================================================================================================
-------------------- Debounce and Throttle ---------------------------
+
+// ========================================================================================================================================================================
+
+// ------------------- Debounce and Throttle ---------------------------
 
 export default function App() {
   const handleChange = (e) => {
@@ -295,6 +309,7 @@ export default function App() {
       timer = setTimeout(() => fn(...args), delay);
     };
   }
+  
   //throttle function
   function throttle(func, delay) {
     let run = false;
@@ -319,7 +334,9 @@ export default function App() {
     </div>
   );
 }
----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 import { useState } from "react";
 import "./styles.css";
 
@@ -336,4 +353,4 @@ export default function App() {
     </div>
   );
 }
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------
